@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="pico.min.css">
+  <title>Generate your secure password</title>
+<style> 
+  .copied {
+  position: absolute;
+  display: none;
+  margin-left: 5px;
+  padding: 5px 12px;
+  background-color: #00000083;
+  border-radius: 4px;
+  color: #fff;
+}</style>
+</head>
+<body>
+  <main class="container">
+    <nav>
+      <ul>
+        <li><a href="#" class="secondary"></a></li>
+      </ul>
+      <ul>
+        <li><h2>Generate Random Password</h2></li>
+      </ul>
+      <ul>
+        <li><a href="blog.html" class="secondary">Blog</a></li>
+	<!--<li><img src="twitter.png" alt="Twitter" width="32" height="32"/></li>-->
+      </ul>
+    </nav>
+    <h2>Generate your secure password</h2>
+    <div class="grid">
+      <div>
+        <div class="length-container">
+          <label for="range">Length: <span id="rangeValue">19</span></label>
+            <input type="range" min="12" max="35" value="19" id="range" name="range">
+        </div>
+
+        <input type="checkbox" id="useLetters" checked>
+        Use letters<br />
+        <input type="checkbox" id="useNumbers" checked>
+        Use numbers<br />
+        <input type="checkbox" id="useSpecialChars" checked>
+        Use special characters<br />
+        <br>
+
+        <b>Generated password</b><div id="copied" class="copied">Copied</div>
+          <input type="text" id="password">
+        <button id="generate">Generate</button>
+      </div>
+      <!--<div>Ads</div>-->
+    </div>
+  </main>
+  <script>
+    const generateButton = document.getElementById('generate');
+    const passwordField = document.getElementById('password');
+    const lengthSelect = document.getElementById('range');
+    const useLettersCheckbox = document.getElementById('useLetters');
+    const useNumbersCheckbox = document.getElementById('useNumbers');
+    const useSpecialCharsCheckbox = document.getElementById('useSpecialChars');
+
+    const generatePassword = () => {
+      const length = parseInt(lengthSelect.value);
+      const useLetters = useLettersCheckbox.checked;
+      const useNumbers = useNumbersCheckbox.checked;
+      const useSpecialChars = useSpecialCharsCheckbox.checked;
+
+      let charset = "";
+      if (useLetters) charset += "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      if (useNumbers) charset += "0123456789";
+      if (useSpecialChars) charset += "!@#$%^&*()-_=+";
+
+      let password = '';
+      for (let i = 0; i < length; i++) {
+        const randomIndex = Math.floor(Math.random() * charset.length);
+        password += charset[randomIndex];
+      }
+
+      passwordField.value = password;
+    };
+
+    generatePassword();
+    generateButton.addEventListener('click', generatePassword);
+    generateButton.addEventListener('click', () => {
+      passwordField.select();
+      document.execCommand('copy');
+      document.getElementById("copied").style.display = "inline";
+      setTimeout( function() {document.getElementById("copied").style.display = "none";}, 1000);
+    });
+
+    const range = document.getElementById("range");
+    const rangeValue = document.getElementById("rangeValue");
+    range.addEventListener("input", () => {
+      rangeValue.textContent = `${range.value}`;
+    });
+
+  /*  copyPasswordButton.addEventListener('click', () => {
+      passwordField.select();
+      document.execCommand('copy');
+    });
+    */
+  </script>
+</body>
+</html>
