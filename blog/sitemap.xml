@@ -2,17 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://generate-random-password.com/</loc>
+    <loc>https://generate-random-password.com/blog/</loc>
     <lastmod>2024-01-27T12:13:51+01:00</lastmod>
   </url><url>
-    <loc>https://generate-random-password.com/posts/</loc>
+    <loc>https://generate-random-password.com/blog/posts/</loc>
     <lastmod>2024-01-27T12:13:51+01:00</lastmod>
   </url><url>
-    <loc>https://generate-random-password.com/posts/my-first-post/</loc>
+    <loc>https://generate-random-password.com/blog/posts/my-first-post/</loc>
     <lastmod>2024-01-27T12:13:51+01:00</lastmod>
   </url><url>
-    <loc>https://generate-random-password.com/categories/</loc>
+    <loc>https://generate-random-password.com/blog/categories/</loc>
   </url><url>
-    <loc>https://generate-random-password.com/tags/</loc>
+    <loc>https://generate-random-password.com/blog/tags/</loc>
   </url>
 </urlset>

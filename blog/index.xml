@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Generate Random Password</title>
-    <link>https://generate-random-password.com/</link>
+    <link>https://generate-random-password.com/blog/</link>
     <description>Recent content on Generate Random Password</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 27 Jan 2024 12:13:51 +0100</lastBuildDate>
-    <atom:link href="https://generate-random-password.com/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://generate-random-password.com/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Welcome to our blog!</title>
-      <link>https://generate-random-password.com/posts/my-first-post/</link>
+      <link>https://generate-random-password.com/blog/posts/my-first-post/</link>
       <pubDate>Sat, 27 Jan 2024 12:13:51 +0100</pubDate>
-      <guid>https://generate-random-password.com/posts/my-first-post/</guid>
+      <guid>https://generate-random-password.com/blog/posts/my-first-post/</guid>
       <description>Strengthen Your Digital Fortress: The Importance of Random Password Generation Hello and Welcome to Our Cybersecurity Haven! In the vast expanse of the digital world, where our lives are intricately woven into the fabric of the internet, ensuring the security of our online presence has never been more crucial. We&amp;rsquo;re thrilled to have you here on our blog, dedicated to unraveling the mysteries of cybersecurity and guiding you through the maze of digital defense.</description>
     </item>
   </channel>
