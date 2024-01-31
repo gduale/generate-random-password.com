@@ -1,59 +1,76 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="pico.min.css">
   <title>Generate your secure password</title>
 <style> 
   .copied {
-  position: absolute;
-  display: none;
-  margin-left: 5px;
-  padding: 5px 12px;
-  background-color: #00000083;
-  border-radius: 4px;
-  color: #fff;
-}</style>
+    position: absolute;
+    display: none;
+    margin-left: 5px;
+    padding: 5px 12px;
+    background-color: #00000083;
+    border-radius: 4px;
+    color: #fff;
+  }
+  #generate {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #b9b8b8;
+    color: #ffffff;
+    border: 2px solid #cfcece;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  body {
+    background-color: #f2f2f2;
+    width: 50%;
+    margin: 0 auto;
+    font-size: 23px;
+  }
+  nav {
+    text-align: right;
+    padding: 10px;
+  }
+  #password {
+    width: 34%;
+    padding: 5px;
+    margin: 5px;
+    box-sizing: border-box;
+  }
+  @media screen and (max-width: 767px) {
+    body {
+      width: 90%;
+      font-size: 17px;
+    }
+    #password {
+      width: 80%;
+    }
+  }
+</style>
 </head>
 <body>
-  <main class="container">
-    <nav>
-      <ul>
-        <li><a href="#" class="secondary"></a></li>
-      </ul>
-      <ul>
-        <li><h2>Generate Random Password</h2></li>
-      </ul>
-      <ul>
-        <li><a href="blog/" class="secondary">Blog</a></li>
-	<!--<li><img src="twitter.png" alt="Twitter" width="32" height="32"/></li>-->
-      </ul>
-    </nav>
-    <h2>Generate your secure password</h2>
-    <div class="grid">
-      <div>
-        <div class="length-container">
-          <label for="range">Length: <span id="rangeValue">19</span></label>
-            <input type="range" min="12" max="35" value="19" id="range" name="range">
-        </div>
-
-        <input type="checkbox" id="useLetters" checked>
-        Use letters<br />
-        <input type="checkbox" id="useNumbers" checked>
-        Use numbers<br />
-        <input type="checkbox" id="useSpecialChars" checked>
-        Use special characters<br />
-        <br>
-
-        <b>Generated password</b><div id="copied" class="copied">Copied</div>
-          <input type="text" id="password">
-        <button id="generate">Generate</button>
-      </div>
-      <!--<div>Ads</div>-->
-    </div>
-  </main>
+  <h1>Generate Random Password</h1>
+  <nav><a href="blog/">Blog</a></nav>
+  <h2>Generate your secure password</h2>
+  <label for="range">Length: <span id="rangeValue">19</span></label>
+  <input type="range" min="12" max="35" value="19" id="range" name="range"><br />
+  <input type="checkbox" id="useLetters" checked>
+  Use letters<br />
+  <input type="checkbox" id="useNumbers" checked>
+  Use numbers<br />
+  <input type="checkbox" id="useSpecialChars" checked>
+  Use special characters<br />
+  <br>
+  <h2>Generated password</h2><div id="copied" class="copied">Copied</div>
+  <input type="text" id="password">
+  <p><button id="generate">Generate</button></p>
   <script>
     const generateButton = document.getElementById('generate');
     const passwordField = document.getElementById('password');
@@ -96,12 +113,6 @@
     range.addEventListener("input", () => {
       rangeValue.textContent = `${range.value}`;
     });
-
-  /*  copyPasswordButton.addEventListener('click', () => {
-      passwordField.select();
-      document.execCommand('copy');
-    });
-    */
   </script>
 </body>
 </html>
