@@ -7,69 +7,27 @@
   <meta name="description" content="Generate random and secure passwords easily">
   <meta name="keywords" content="Random Password Generator, Online Password Generator, Password Generator, Secure Password Generator, Create Password, Generate Password">
   <link rel="icon" href="blog/favicon.ico" />
-<style> 
-  .copied {
-    position: absolute;
-    display: none;
-    margin-left: 5px;
-    padding: 5px 12px;
-    background-color: #00000083;
-    border-radius: 4px;
-    color: #fff;
-  }
-  #generate {
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #b9b8b8;
-    color: #ffffff;
-    border: 2px solid #cfcece;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="css/pico.indigo.min.css" />
+<style>
   body {
-    background-color: #f2f2f2;
-    width: 50%;
-    margin: 0 auto;
-    font-size: 23px;
+    font-family: 'Space Grotesk', sans-serif;
   }
-  nav {
-    text-align: right;
-    padding: 10px;
+  h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
   }
-  nav a {
-    font-weight: bold;
-    text-decoration: none;
-    color: black;
-    transition: color 0.3s;
-  }
-  nav a:hover {
-    color: #b9b8b8
-  }
-  #password {
-    width: 34%;
-    padding: 5px;
-    margin: 5px;
-    box-sizing: border-box;
-  }
-  @media screen and (max-width: 767px) {
-    body {
-      width: 90%;
-      font-size: 17px;
-    }
-    #password {
-      width: 80%;
-    }
+  h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
   }
 </style>
+
 </head>
 <body>
-  <h1>Generate Random Password</h1>
-  <nav><a href="blog/" title="Blog about computer security and random password generator">Blog</a></nav>
+<main class="container">
+  <h1 align="center">Generate Random Password</h1>
+  <nav><a href="blog/" title="Blog about computer security and random password generator">Blog</a></nav><br>
   <h2>Generate your secure password</h2>
   <label for="range">Length: <span id="rangeValue">19</span></label>
   <input type="range" min="12" max="35" value="19" id="range" name="range"><br />
@@ -80,10 +38,14 @@
   <input type="checkbox" id="useSpecialChars" checked>
   Use special characters<br />
   <br>
-  <h2>Generated password</h2><div id="copied" class="copied">Copied</div>
+  <h2>Generated password</h2>
   <input type="text" id="password">
+  <div id="copied" class="copied" style="display: none;">Copied</div>
   <p><button id="generate">Generate</button></p>
-  <script>
+  <hr>
+  <!-- <a href="privacy-policy.html">Privacy policy</a> - <a href="legal-notice.html">Legal notice</a> -->
+</main>
+<script>
     const generateButton = document.getElementById('generate');
     const passwordField = document.getElementById('password');
     const lengthSelect = document.getElementById('range');
@@ -116,7 +78,7 @@
     generateButton.addEventListener('click', () => {
       passwordField.select();
       document.execCommand('copy');
-      document.getElementById("copied").style.display = "inline";
+      document.getElementById("copied").style.display = "block";
       setTimeout( function() {document.getElementById("copied").style.display = "none";}, 1000);
     });
 
