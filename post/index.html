@@ -10,12 +10,8 @@
  
 
 
-      <title>Generate Random Password</title>
-  
-  <meta name="description" content="Generate your secure password Length: 19 Use letters
-Use numbers
-Use special characters
-Generated password Copied Generate"><script type="application/ld+json">
+      <title>Posts - Generate Random Password</title>
+<script type="application/ld+json">
 {
     "@context": "http://schema.org",
     "@type": "WebSite",
@@ -36,21 +32,13 @@ Generated password Copied Generate"><script type="application/ld+json">
 }
 </script>
 
-<meta property="og:title" content="Generate Random Password" />
-<meta property="og:description" content="Generate your secure password Length: 19 Use letters
-Use numbers
-Use special characters
-Generated password Copied Generate">
+<meta property="og:title" content="Posts" />
 <meta property="og:image" content="https://www.generate-random-password.com/img/avatar-icon.png" />
-<meta property="og:url" content="https://www.generate-random-password.com/" />
+<meta property="og:url" content="https://www.generate-random-password.com/post/" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Generate Random Password" />
 
-  <meta name="twitter:title" content="Generate Random Password" />
-  <meta name="twitter:description" content="Generate your secure password Length: 19 Use letters
-Use numbers
-Use special characters
-Generated password Copied Generate">
+  <meta name="twitter:title" content="Posts" />
   <meta name="twitter:image" content="https://www.generate-random-password.com/img/avatar-icon.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <link href='https://www.generate-random-password.com/img/favicon.ico' rel='icon' type='image/x-icon'/>
@@ -187,14 +175,29 @@ Generated password Copied Generate">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <div class="page-heading">
+            <div class="post-heading">
               
-                <h1>Generate Random Password</h1>
-              
-              
-                <hr class="small">
+                <h1>Posts</h1>
               
               
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on January 27, 2024
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;0&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;0&nbsp;words
+  
+  
+  
+</span>
+
+
               
             </div>
           </div>
@@ -206,75 +209,11 @@ Generated password Copied Generate">
 
 
     
-  <div role="main" class="container">
+  <div class="container" role="main">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         
-          <div class="well">
-            <h2 id="generate-your-secure-password">Generate your secure password</h2>
-<p><label for="range">Length: <span id="rangeValue">19</span></label>
-<input type="range" min="12" max="35" value="19" id="range" name="range"><br />
-<input type="checkbox" id="useLetters" name="letters" checked>
-Use letters<br />
-<input type="checkbox" id="useNumbers" name="numbers" checked>
-Use numbers<br />
-<input type="checkbox" id="useSpecialChars" name="specials_chars" checked>
-Use special characters<br />
-<br></p>
-  <h3>Generated password</h3>
-  <input type="text" id="password" name="password">
-  <div id="copied" class="copied" style="display: none;">Copied</div>
-  <p><button id="generate">Generate</button></p>
-  <hr>
-  <!-- <a href="privacy-policy.html">Privacy policy</a> - <a href="legal-notice.html">Legal notice</a> -->
-<script>
-    const generateButton = document.getElementById('generate');
-    const passwordField = document.getElementById('password');
-    const lengthSelect = document.getElementById('range');
-    const useLettersCheckbox = document.getElementById('useLetters');
-    const useNumbersCheckbox = document.getElementById('useNumbers');
-    const useSpecialCharsCheckbox = document.getElementById('useSpecialChars');
-
-    const generatePassword = () => {
-      const length = parseInt(lengthSelect.value);
-      const useLetters = useLettersCheckbox.checked;
-      const useNumbers = useNumbersCheckbox.checked;
-      const useSpecialChars = useSpecialCharsCheckbox.checked;
-
-      let charset = "";
-      if (useLetters) charset += "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-      if (useNumbers) charset += "0123456789";
-      if (useSpecialChars) charset += "!@#$%^&*()-_=+";
-
-      let password = '';
-      for (let i = 0; i < length; i++) {
-        const randomIndex = Math.floor(Math.random() * charset.length);
-        password += charset[randomIndex];
-      }
-
-      passwordField.value = password;
-    };
-
-    generatePassword();
-    generateButton.addEventListener('click', generatePassword);
-    generateButton.addEventListener('click', () => {
-      passwordField.select();
-      document.execCommand('copy');
-      document.getElementById("copied").style.display = "block";
-      setTimeout( function() {document.getElementById("copied").style.display = "none";}, 1000);
-    });
-
-    const range = document.getElementById("range");
-    const rangeValue = document.getElementById("rangeValue");
-    range.addEventListener("input", () => {
-      rangeValue.textContent = `${range.value}`;
-    });
-  </script>
-          </div>
-        
-
         <div class="posts-list">
-          
           
             <article class="post-preview">
     <a href="https://www.generate-random-password.com/Strengthen-Your-Digital-Fortress-The-Importance-of-Random-Password-Generation/">
@@ -352,21 +291,12 @@ Use special characters<br />
 </article>
           
         </div>
-
         
       </div>
     </div>
   </div>
 
       
-    <div class="page-meta">
-  
-  
-  
-</div>
-
-
-  
 <footer>
   <div class="container">
     
@@ -376,7 +306,7 @@ Use special characters<br />
           
           
           <li>
-            <a href="/index.xml" title="RSS">
+            <a href="/post/index.xml" title="RSS">
               <span class="fa-stack fa-lg">
                 <i class="fas fa-circle fa-stack-2x"></i>
                 <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
