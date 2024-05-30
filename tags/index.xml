@@ -6,6 +6,21 @@
     <description>Recent content in Tags on Generate Random Password</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
+    <lastBuildDate>Tue, 28 May 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://www.generate-random-password.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Password Manager</title>
+      <link>https://www.generate-random-password.com/tags/password-manager/</link>
+      <pubDate>Tue, 28 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.generate-random-password.com/tags/password-manager/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Passwords</title>
+      <link>https://www.generate-random-password.com/tags/passwords/</link>
+      <pubDate>Sat, 27 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://www.generate-random-password.com/tags/passwords/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>
